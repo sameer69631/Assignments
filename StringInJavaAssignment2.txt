@@ -1,0 +1,111 @@
+STRING IN JAVA
+
+Ans-1:import java.util.Scanner;
+
+public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = sc.next();    //string is taken input from user
+		System.out.println(str);
+	}
+}
+
+Ans-2: There are two ways to concatenate two strings in java
+       1-By using String.concat(); method 
+  
+        public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "pw";
+		str = str.concat("java");
+		System.out.println(str);
+	}
+}
+
+        2-By using '+' operator
+     
+         public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "pw";
+		str = str+"java";
+		System.out.println(str);
+	}
+}
+
+Ans-3: we use .length(); method to find the length of the String
+
+       public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "pw";
+		
+		System.out.println(str.length());
+	}
+}
+
+Ans-4: we can use .equals(); method to compare two Strings in java
+       public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "pw";
+		String str2 = "skills";
+		System.out.println(str.equals(str2));
+	}
+}
+
+Ans-5:public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "refrigerator";
+		
+		System.out.println(str.length());  //output-12
+	}
+}
+
+Ans-6: .contains method shows that the letter is present in String or not
+        public class CodeSnippet {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String str = "Umbrella";
+		
+		System.out.println(str.contains("e"));  //output-true
+	}
+}
+
+Ans-7:Program to remove consonents 
+      public class CodeSnippet {
+
+	public static void main(String[] args) {
+		String remCons = "";
+		String str = "Hello,have a good day";
+		for(int i=0; i<str.length(); i++) {
+			if (str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' || str.charAt(i)=='o' || str.charAt(i)=='u') {
+				remCons = remCons+str.charAt(i)+" ";
+			}
+		}
+		System.out.println(remCons);   //after removing consonents output - e o a e a o o a
+		
+	}
+}

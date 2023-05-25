@@ -1,0 +1,202 @@
+TWO DIMENTIONAL ARRAY ASSIGNMENT
+
+Ans-1:-
+import java.util.Scanner;
+
+// taking input from user and printing number of positive ,negative,odd,even and zeroes
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter number of rows : ");
+		int m = sc.nextInt();
+		System.out.println("enter number of colums : ");
+		int n=sc.nextInt();
+		
+		int array[][] = new int[m][n];
+		
+		System.out.println("enter "+m*n+" elements : ");
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				array[i][j]=sc.nextInt();
+			}
+		}
+		
+		int positiveNums=0, negetiveNums=0, oddNums=0, evenNums=0, zeroes = 0;
+		
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				if(array[i][j]>0) {
+					positiveNums++;
+				}
+				if (array[i][j]<0) {
+					negetiveNums++;
+				}
+				if (array[i][j]%2!=0) {
+					oddNums++;
+				}
+				if (array[i][j]%2==0) {
+					evenNums++;
+				}
+				if (array[i][j]==0) {
+					zeroes++;
+				}
+			}
+		}
+		
+		System.out.println("no of positive numbers : "+positiveNums);
+		System.out.println("no of negetive numbers :"+negetiveNums);
+		System.out.println("no of odd numbers :"+oddNums);
+		System.out.println("no of even numbers :"+evenNums);
+		System.out.println("no of zerors :"+zeroes);
+		
+		
+	}
+}
+
+Ans-2:-
+// printing the elements above the secondary diagonal
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter number of rows : ");
+		int m = sc.nextInt();
+		System.out.println("enter number of colums : ");
+		int n=sc.nextInt();
+		
+		int array[][] = new int[m][n];
+		
+		System.out.println("enter "+m*n+" elements : ");
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				array[i][j]=sc.nextInt();
+			}
+		}
+		
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				if((i+j)<m-1) {
+					System.out.print(array[i][j]);
+				}
+			}
+		}
+		
+		
+	}
+}
+
+Ans-3:-
+import java.util.Scanner;
+
+// printing the elements of both diagonal in a square matrix
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter number of rows : ");
+		int m = sc.nextInt();
+		System.out.println("enter number of colums : ");
+		int n=sc.nextInt();
+		
+		int array[][] = new int[m][n];
+		
+		System.out.println("enter "+m*n+" elements : ");
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				array[i][j]=sc.nextInt();
+			}
+		}
+		
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				if((i+j)==m-1 || (i-j)==0) {
+					System.out.print(array[i][j]);
+				}
+			}
+		}
+		
+		
+	}
+}
+
+Ans-4:-
+import java.util.Scanner;
+
+// printing the largest element in a matrix
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter number of rows : ");
+		int m = sc.nextInt();
+		System.out.println("enter number of colums : ");
+		int n=sc.nextInt();
+		
+		int array[][] = new int[m][n];
+		
+		System.out.println("enter "+m*n+" elements : ");
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				array[i][j]=sc.nextInt();
+			}
+		}
+		
+		int largestElement=0;
+		for(int i=1;i<m;i++) {
+			for(int j=1;j<n;j++) {
+				if(array[i][j]>array[i-1][j-1]) {
+					largestElement = array[i][j];
+				}
+			}
+		}
+		System.out.println("largest element is :"+largestElement);
+		
+	}
+}
+
+Ans-5:-
+import java.util.Scanner;
+
+// function to display middle row and column of square matrix with odd dimensions
+public class Main {
+
+	public static void displayMid(int [][]array,int rows,int colums) {
+		
+		for(int i=0;i<rows;i++) {
+			for(int j=0;j<colums;j++) {
+				if(i==rows/2) {
+					System.out.print(array[i][j]);
+				}
+				else if(j==colums/2) {
+					System.out.print(array[i][j]);
+				}
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("enter number of rows : ");
+		int m = sc.nextInt();
+		System.out.println("enter number of colums : ");
+		int n=sc.nextInt();
+		
+		int array[][] = new int[m][n];
+		
+		System.out.println("enter "+m*n+" elements : ");
+		for(int i=0;i<m;i++) {
+			for(int j=0;j<n;j++) {
+				array[i][j]=sc.nextInt();
+			}
+		}
+		
+		displayMid(array, m, n);
+		
+	}
+}

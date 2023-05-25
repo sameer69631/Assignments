@@ -1,0 +1,72 @@
+TIME AND SPACE COMPLEXITY ASSIGNMENT
+
+Ans-1:-the time complexity of given code is O(n^2).because we are using two nested loops
+       space complexity is O(1)
+       time complexity can be redused by using a mathematical formula instead of loops
+
+Ans-2:-given recurence relation T(n)=3T(n-1)+12n and T(0)=5
+       given to find T(2)
+       T(1)=3T(0)+12 => T(1)=3*5+12 => T(1)=27
+       T(2)=3T(1)+24 => T(2)=3*27+24 => T(2)=105
+
+Ans-3:-given recurence relation T(n)=T(n-1)+c...................equation(1)
+       T(n-1)=T(n-2)+c
+        substituting T(n-1) in equation(1)
+       T(n)=T(n-2)+2c...................equation(2)
+       T(n-2)=T(n-3)+c
+        substituting T(n-2) in equation(2)
+       T(n)=T(n-3)+3c...................equation(3)
+   from equation(1) ,equation(2) ,equation(3)
+       for k times T(n)=T(n-k)+kc
+        let n-k = 1 => k=n
+       => T(n)=O(n)
+
+Ans-4:-given recurence relation is T(n)=16T(n/4)+n^2logn
+       comparing with standard equation T(n)=aT(n/b)+n^klog^pn
+       a=16,b=4,p=1,k=2
+       b^k=4^2=16
+       here b^k=a and p>-1
+       Hence T(n) = teeta(n^logab*log^p+1n)
+       T(n)=teeta(n1/2log2n)
+
+Ans-5:-given recurence relation is T(n)=2T(n/2)+n
+       the cost to complete work at first level is n
+       herre the size of problem is dividing into tow parts n/2 and n/2 at first level
+       the cost to complete work at second level is n/2+n/2=n
+       at thirt level the size of problem is divided into more two parts from each part n/4,n/4,n/4 and n/4
+       the cost to complete work at thirt level is n/4 + n/4 + n/4 + n/4 = n
+       size of sub problem at level 1 = n/2^0
+       size of sub problem at level 2 = n/2^1
+       size of sub problem at level 3 = n/2^2
+     hence at x level size of sub problem will be n/2^x
+       at last level size of sub problem will be 1.
+       then n/2^x=1 => n=2^x apply log on both side
+        logn=xlog2 => logn=x.
+  total summation = time complexity
+       n[n+n+n+n+..........]logn levels
+       it is forming a GP series,sum of infinit series is a/1-r.
+       n(n/0)
+       =O(n)
+
+
+Ans-6:-given recurence relation is T(n)=2T(n/2)+k
+       the cost to complete work at first level is k
+       herre the size of problem is dividing into tow parts n/2 and n/2 at first level
+       the cost to complete work at second level is k(n/2+n/2)=kn
+       at thirt level the size of problem is divided into more two parts from each part n/4,n/4,n/4 and n/4
+       the cost to complete work at thirt level is k(n/4 + n/4 + n/4 + n/4) = kn
+       size of sub problem at level 1 = k(n/2^0)
+       size of sub problem at level 2 = k(n/2^1)
+       size of sub problem at level 3 = k(n/2^2)
+       at x level size of sub problem will be k(n/2^x)
+              at last level size of sub problem will be 1.
+       then n/2^x=1 => n=2^x apply log on both side
+        logn=xlog2 => logn=x.
+       total summation = time complexity
+       k[n+n+n+n+..........]logn levels
+       it is forming a GP series,sum of infinit series is a/1-r.
+       k(1/2-1)+O(n)
+       T(n)=O(n)
+
+
+

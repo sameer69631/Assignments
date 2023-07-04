@@ -1,0 +1,17 @@
+public class VariableExample {
+    public static void main(String[] args) {
+        // Integer variable
+        int myInteger = 10;
+
+        // Double variable
+        double myDouble = 3.14;
+
+        // String variable
+        String myString = "Hello, World!";
+
+        // Print the values of the variables
+        System.out.println("Integer value: " + myInteger);
+        System.out.println("Double value: " + myDouble);
+        System.out.println("String value: " + myString);
+    }
+}

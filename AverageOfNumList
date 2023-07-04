@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AverageCalculator {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a list of numbers (enter 0 to finish):");
+
+        int input;
+        do {
+            input = scanner.nextInt();
+            if (input != 0) {
+                numbers.add(input);
+            }
+        } while (input != 0);
+
+        double sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+
+        double average = sum / numbers.size();
+
+        System.out.println("Average: " + average);
+
+        scanner.close();
+    }

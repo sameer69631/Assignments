@@ -1,0 +1,58 @@
+Ans:1-The conditional operator works as follows: The first operand is implicitly converted to bool . It is evaluated and all side effects are completed before continuing.
+
+Ans:2-Arithmetic operator,Assignment operator,relational operator.
+
+Ans:3-Switch case is used to execute one of the many codes in java code stops executing if the case matches.
+
+Ans:4-Conditional statements in Java are used to make decisions based on certain conditions. The most common conditional statements in Java are the If-Else statement, the Switch statement, and the Ternary Operator. These statements allow the program to execute different blocks of code based on specific conditions.
+
+Ans:5-if(condition){
+   //code
+}else{
+  //code if condition do not matches
+}
+
+Ans:6-we compare tow strings by using String.equals() method in java.
+
+Ans:7-A String object always represents the same string. StringBuilder is an example of a mutable type. It has methods to delete parts of the string, insert or replace characters
+
+Ans:8-import java.util.Arrays;
+
+public class StringSorter {
+    public static void main(String[] args) {
+        String input = "openai";
+        String sortedString = sortStringAlphabetically(input);
+        System.out.println("Original string: " + input);
+        System.out.println("Sorted string: " + sortedString);
+    }
+
+    public static String sortStringAlphabetically(String input) {
+        // Convert the string to an array of characters
+        char[] chars = input.toCharArray();
+
+        // Sort the character array
+        Arrays.sort(chars);
+
+        // Convert the sorted character array back to a string
+        return new String(chars);
+    }
+}
+
+Ans:9-public class LetterChecker {
+    public static void main(String[] args) {
+        String word = "Umbrella";
+        boolean isLetterPresent = checkIfLetterPresent(word, 'e');
+        System.out.println("Word: " + word);
+        System.out.println("'e' is present: " + isLetterPresent);
+    }
+
+    public static boolean checkIfLetterPresent(String word, char letter) {
+        // Convert the word to lowercase for case-insensitive comparison
+        word = word.toLowerCase();
+
+        // Check if the letter is present in the word
+        return word.contains(Character.toString(letter));
+    }
+}
+
+Ans:10-the string constant pool is stored in the Metaspace.In Heap Area.

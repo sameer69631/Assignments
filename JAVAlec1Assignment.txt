@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Lecture 1 assignment.
 
 Ans:1-Both compiler and interpreter are softwares .A compiler translates the entire source code in a single run. An interpreter translates the entire source code line by line.
@@ -23,4 +24,31 @@ Ans:10-ClassLoader is a subsystem of the Java Virtual Machine which loads class 
 This component loads the classes. ...
 This section of the JVM has the following components: ...
 The method area stores all the class-level data. ...
+=======
+Lecture 1 assignment.
+
+Ans:1-Both compiler and interpreter are softwares .A compiler translates the entire source code in a single run. An interpreter translates the entire source code line by line.
+
+Ans:2-Java Run-time Environment (JRE) is the part of the Java Development Kit (JDK).It is a runtime envieonment to run a java program.JVM is used for executing Java bytecode, regardless of the platform or operating system.
+
+Ans:3-JVM Allocates two type of memory Stack memory and Heap memory.
+
+Ans:4-Just-In-Time (JIT) compiler is a component of the runtime environment that improves the performance of Java applications by compiling bytecodes to native machine code at run time.
+
+Ans:5-There are four types of access specifiers in java public,protected,default and private.
+
+Ans:6-Compiler is a software which converts high level language code into bytecode in a single run.
+
+Ans:7-There are three types of variables in java local variable,instance variable, and static variable.
+
+Ans:8-There are eight primitive data types in java byte,short,int,long,float,double,boolean and char 
+      There are four non primitive data types in java String,Arrays,Classes, and Interface.
+
+Ans:9-Identifiers are the name of classes , methods , variables and interface.
+
+Ans:10-ClassLoader is a subsystem of the Java Virtual Machine which loads class files. ...
+This component loads the classes. ...
+This section of the JVM has the following components: ...
+The method area stores all the class-level data. ...
+>>>>>>> 65e5b2cfe88fb188bf2338e58af447bf901517d7
 The heap area stores all the Objects and their instance arrays and variables.
